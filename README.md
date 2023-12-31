@@ -2,3 +2,4 @@
 
 ## Technology used
 - Express.js
+- EJS
