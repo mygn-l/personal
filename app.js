@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+//import mongoose from "mongoose";
 import express_session from "express-session";
 //import redis from "redis";
 //import connect_redis from "connect-redis";
@@ -10,14 +10,14 @@ import cors from "cors";
 import favicon from "serve-favicon";
 import url from "url";
 import path from "path";
-import vhost from "vhost";
+//import vhost from "vhost";
 import http from "http";
-import { Server } from "socket.io";
+//import { Server } from "socket.io";
 
 import log from "./lib/logger.js";
 import router from "./api/express/index.js";
-import init from "./api/socket/index.js";
-import db_config from "./config/db.js";
+//import init from "./api/socket/index.js";
+//import db_config from "./config/db.js";
 import session_config from "./config/session.js";
 //import { rate_limiter } from "./api/express/mid/limiter.js";
 
@@ -64,6 +64,7 @@ app.use(
 app.use(nocache());
 app.use(session);
 app.use(compression());
+app.use(favicon(path.join(__dirname, "public/images/favicon.png")));
 app.use("/public", express.static(path.join(__dirname, "public")));
 app.use(router);
 
@@ -73,8 +74,8 @@ server.listen(process.env.PORT || 80, function () {
   log("Server", "listening");
 });
 
-
+/*
 const io = new Server(server);
 init(io, session);
 log("Socket", "listening");
-
+*/
