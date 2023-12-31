@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "agenda": "^5.0.0",
+    "ammojs3": "^0.0.11",
     "bcrypt": "^5.1.0",
     "canvas": "^2.11.2",
     "compression": "^1.7.4",
@@ -30,6 +31,7 @@
     "redis": "^4.6.7",
     "serve-favicon": "^2.5.0",
     "socket.io": "^4.7.1",
+    "three": "^0.160.0",
     "vhost": "^3.0.2"
   },
   "prettier": {

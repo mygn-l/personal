@@ -34,4 +34,8 @@ router.get("/memory", async function (req, res) {
   res.render("pages/memory.ejs");
 });
 
+router.get("*", async function (req, res) {
+  res.render("pages/error.ejs");
+});
+
 export default router;
