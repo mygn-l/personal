@@ -73,8 +73,8 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 app.get("/three.js", function (req, res) {
   res.sendFile(path.join(__dirname, "node_modules/three/build/three.module.min.js"));
 });
-app.get("/ammo.js", function (req, res) {
-  res.sendFile(path.join(__dirname, "node_modules/ammojs3/dist/ammo.js"));
+app.get("/socket.io", function (req, res) {
+  res.sendFile(path.join(__dirname, "node_modules/socket.io/client-dist/socket.io.esm.min.js"));
 });
 app.use(router);
 

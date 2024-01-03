@@ -1,3 +1,5 @@
+import { io } from "/socket.io";
+
 const GET = async function (path, handler) {
   let response = await fetch(path);
   return handler(response);
