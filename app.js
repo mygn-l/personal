@@ -22,10 +22,13 @@ import session_config from "./config/session.js";
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
+/*
 mongoose.connect(db_config, { useNewUrlParser: true, useUnifiedTopology: true }).then(function () {
   log("Database", "connected");
 });
+*/
 
+/*
 const redis_client = redis.createClient({
   host: "localhost",
   port: 6379,
@@ -49,11 +52,27 @@ const session = express_session({
     maxAge: 3600000,
   },
 });
+*/
 
 const app = express();
 app.set("view engine", "ejs");
 app.set("trust proxy", true);
-app.use(helmet());
+/*
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        "script-src": [
+          "'self'",
+          "https://unpkg.com",
+          "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js",
+        ],
+      },
+    },
+  })
+);
+*/
 app.use(cors());
 app.use(
   express.json({
@@ -66,13 +85,11 @@ app.use(
   })
 );
 app.use(nocache());
-app.use(session);
+//app.use(session);
 app.use(compression());
 app.use(favicon(path.join(__dirname, "public/images/favicon.png")));
 app.use("/public", express.static(path.join(__dirname, "public")));
-app.get("/three.js", function (req, res) {
-  res.sendFile(path.join(__dirname, "node_modules/three/build/three.module.min.js"));
-});
+app.use("/three", express.static(path.join(__dirname, "node_modules/three")));
 app.get("/socket.io", function (req, res) {
   res.sendFile(path.join(__dirname, "node_modules/socket.io/client-dist/socket.io.esm.min.js"));
 });
@@ -83,7 +100,9 @@ server.listen(process.env.PORT || 80, function () {
   log("Server", "listening");
 });
 
+/*
 const io = new Socket_server(server);
 socket_init(io, session, function () {
   log("Socket", "listening");
 });
+*/

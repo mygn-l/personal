@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="/public/css/rpg.css" rel="stylesheet" type="text/css" />
     <title>RPG 3D</title>
   </head>
 
   <body>
     <div id="body-container"></div>
 
-    <script type="module" src="/three.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "GLTFLoader": "https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js"
+        }
+      }
+    </script>
+
     <script type="module" src="/socket.io"></script>
     <script type="module" src="/public/lib/face.js"></script>
     <script type="module" src="/public/services/rpg-control.js"></script>

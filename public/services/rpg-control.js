@@ -55,6 +55,12 @@ rpg_control_service.start_perpetual_key = function (handler) {
       rpg_control_service.mouse_position.x -= e.movementX / 300;
       rpg_control_service.mouse_position.y -= e.movementY / 300;
     }
+    if (rpg_control_service.mouse_position.y > Math.PI / 3) {
+      rpg_control_service.mouse_position.y = Math.PI / 3;
+    }
+    if (rpg_control_service.mouse_position.y < -Math.PI / 3) {
+      rpg_control_service.mouse_position.y = -Math.PI / 3;
+    }
   });
 
   let perpetual = function () {

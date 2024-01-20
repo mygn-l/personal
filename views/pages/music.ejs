@@ -3,47 +3,23 @@
   <head>
     <%- include("../parts/head.ejs") %>
 
-    <link href="/public/css/music.css" rel="stylesheet" type="text/css" />
-    <title>Bright Lin</title>
+    <title>Music</title>
   </head>
 
   <body>
+    <%- include("../parts/header.ejs") %>
     <div id="body-container">
-      <%- include("../parts/header.ejs") %>
-
       <h1>Music</h1>
 
       <h2>Violin</h2>
 
       <h3>Scales and arpeggios</h3>
-      <ol>
-        <li>
-          <h3>Galamian</h3>
-          <p>Start from more natural majors : C, G, D, A, E, F, Bb, Eb, Ab</p>
-          <p>Start from more natural minors : A, E, B, F#, D, G, C, F</p>
-          <p>Do not practice exotic scales/arpeggios</p>
-          <ul>
-            <li>Scales in one position : fullbow-4-8-16</li>
-            <li>Three-octave scales : fullbow-4-8-24</li>
-            <li>Four-octave scales : fullbow-4-8-28</li>
-            <li>Arpeggios in one position : 1 bow</li>
-            <li>Three-octave arpeggios : 2 bow/1 bow</li>
-            <li>Four-octave arpeggios : 2 bow/1 bow</li>
-            <li>Arpeggios on one string : 1 bow</li>
-            <li>Broken thirds : 2 bow</li>
-            <li>Chromatic scale : fullbow-6-12-24</li>
-            <li>Diatonic consecutive thirds : fullbow-2-6-12</li>
-            <li>Diatonic consecutive sixths : fullbow-2-6-12</li>
-            <li>Diatonic consecutive octaves : fullbow-2-6-12</li>
-            <li>Diatonic consecutive tenths : fullbow-2-6-12</li>
-            <li>Diatonic consecutive fourths : fullbow-2-6-12</li>
-            <li>Double harmonics thirds : fullbow</li>
-          </ul>
-        </li>
-      </ol>
+      <ul>
+        <li>Galamian</li>
+      </ul>
 
       <h3>Etudes</h3>
-      <ol>
+      <ul>
         <li>Kreutzer</li>
         <li>Gavinies</li>
         <li>Last rose of summer</li>
@@ -59,10 +35,10 @@
         <li>Tartini</li>
         <li>Locatelli</li>
         <li>Vieuxtemps</li>
-      </ol>
+      </ul>
 
       <h3>Pieces</h3>
-      <ol>
+      <ul>
         <li>Bach's 6 sonatas and partitas</li>
         <br />
         <li>Concerto J. B. Accolay</li>
@@ -135,55 +111,30 @@
         <li>Schlindler's List</li>
         <li>Fantaisie (with harp) Saint-saens</li>
         <br />
-      </ol>
-
-      <a href="https://www.masterclass.com/articles/violin-virtuoso-itzhak-perlmans-tips-for-practicing-violin#4-ways-to-establish-good-violin-habits">Perlman</a>
-
-      <h2>Music theory</h2>
-
-      <h3>Fundamentals</h3>
-      <ul>
-        <li>
-          <a href="https://viva.pressbooks.pub/openmusictheory/">Open Music Theory</a> (online)
-        </li>
-        <li>The study of orchestration - Samuel Adler (pdf)</li>
-        <li>
-          <a
-            href="https://www.reddit.com/r/musictheory/wiki/faq/core/new_to_music_theory/#wiki_core_theory_textbooks"
-          >
-            Reddit selections
-          </a>
-        </li>
       </ul>
 
-      <h3>Baroque music</h3>
-      <ol>
-        <li><a href="https://composerfocus.com/how-to-write-a-fugue/">Fugue</a></li>
-        <li>
-          <a
-            href="https://www.tedgreene.com/images/lessons/baroque/SomeOfTheMostCommonChordProgsInBaroqueMajorHarmony_1974-06-12.pdf"
-            >Baroque chord progression</a
-          >
-        </li>
-      </ol>
+      <a href="https://www.masterclass.com/articles/violin-virtuoso-itzhak-perlmans-tips-for-practicing-violin#4-ways-to-establish-good-violin-habits"
+        >Perlman</a
+      >
 
-      <h3>BEST scorewriting software</h3>
+      <h2>Music theory</h2>
       <ul>
-        <li>Musescore</li>
+        <li><a href="https://viva.pressbooks.pub/openmusictheory/">Open Music Theory</a></li>
+        <li>The study of orchestration - Adler</li>
+        <li><a href="https://www.reddit.com/r/musictheory/wiki/faq/core/new_to_music_theory/#wiki_core_theory_textbooks">Reddit</a></li>
       </ul>
 
       <h2>For listening</h2>
 
       <h3>Orchestral</h3>
-      <ol>
+      <ul>
         <li>Symphony 10, 6 - Mahler</li>
         <li>Double violin concerto, Air on G - Bach</li>
         <li>La mer - Debussy</li>
         <li>Symphony 7 - Bruckner</li>
-      </ol>
-
+      </ul>
       <h3>Piano</h3>
-      <ol>
+      <ul>
         <li>Nocturnes 9-1, 9-2, 27-2, 48-1, 55-1, posth-16 - Chopin</li>
         <li>Ballades, tristesse, fantaisie impromptu - Chopin</li>
         <li>Pavane, Ondine, Miroirs - Ravel</li>
@@ -191,12 +142,9 @@
         <li>Traumerei - Schumann</li>
         <li>Fruhlingslied, Songs without words - Mendelssohn</li>
         <li>Liebestraum, Sospiro, Campanella (spectacular, but ugly), Consolations - Liszt</li>
-        <li>
-          Aria (Goldberg variations), art of fugue, toccata (organ), prelude (well-tempered clavier)
-          - Bach
-        </li>
+        <li>Aria (Goldberg variations), art of fugue, toccata (organ), prelude (well-tempered clavier) - Bach</li>
         <li>Madwoman on the seashore - Alkan</li>
-      </ol>
+      </ul>
     </div>
     <%- include("../parts/footer.ejs") %>
   </body>

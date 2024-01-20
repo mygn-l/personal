@@ -6,6 +6,7 @@ import pages from "./routes/pages.js";
 
 const router = express.Router();
 
+/*
 router.use(async function (req, res, next) {
   if (req.session.entity_created == undefined) {
     req.session.entity_created = true;
@@ -14,6 +15,7 @@ router.use(async function (req, res, next) {
 
   next();
 });
+*/
 
 router.use(pages);
 

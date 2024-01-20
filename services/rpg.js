@@ -1,5 +1,5 @@
-//import RAPIER from "@dimforge/rapier3d-compat/rapier.cjs.js";
-import RAPIER from "@dimforge/rapier3d/rapier.js";
+import RAPIER from "@dimforge/rapier3d-compat/rapier.cjs.js";
+//import RAPIER from "@dimforge/rapier3d/rapier.js";
 
 import { Vector3 } from "../lib/vector.js";
 
@@ -38,11 +38,14 @@ const Player = class {
     this.character_controller.computeColliderMovement(this.collider, this.desired_displacement);
 
     let corrected_displacement = this.character_controller.computedMovement();
-    this.rigid_body.setLinvel({
-      x: corrected_displacement.x / (delay / 1000),
-      y: corrected_displacement.y / (delay / 1000),
-      z: corrected_displacement.z / (delay / 1000),
-    }, true);
+    this.rigid_body.setLinvel(
+      {
+        x: corrected_displacement.x / (delay / 1000),
+        y: corrected_displacement.y / (delay / 1000),
+        z: corrected_displacement.z / (delay / 1000),
+      },
+      true
+    );
 
     this.touching_ground = false;
     for (let i = 0; i < this.character_controller.numComputedCollisions(); i++) {
@@ -64,7 +67,7 @@ const Player = class {
   }
   jump() {
     if (this.touching_ground) {
-      this.velocityY = 10;
+      this.velocityY = 5;
       this.touching_ground = false;
     }
   }
@@ -93,10 +96,10 @@ let world;
 const start_perpetual_game = async function () {
   await RAPIER.init();
 
-  const gravity = { x: 0, y: -10, z: 0 };
+  const gravity = { x: 0, y: -20, z: 0 };
   world = new RAPIER.World(gravity);
 
-  let ground_collider_desc = RAPIER.ColliderDesc.cuboid(10, 2, 10).setTranslation(0, -2, 0);
+  let ground_collider_desc = RAPIER.ColliderDesc.cuboid(50, 2, 50).setTranslation(0, -2, 0);
   let ground_collier = world.createCollider(ground_collider_desc);
   floor_handle = ground_collier.handle;
 
@@ -149,13 +152,25 @@ rpg_service.player_controls = function (username, controls) {
     player.move_direction(0);
   }
   if (active_keys.a === true) {
-    player.move_direction(-Math.PI / 2);
+    player.move_direction(Math.PI / 2);
   }
   if (active_keys.s === true) {
     player.move_direction(Math.PI);
   }
   if (active_keys.d === true) {
-    player.move_direction(Math.PI / 2);
+    player.move_direction(-Math.PI / 2);
+  }
+  if (active_keys.w === true && active_keys.a === true) {
+    player.move_direction(Math.PI / 4);
+  }
+  if (active_keys.w === true && active_keys.d === true) {
+    player.move_direction(-Math.PI / 4);
+  }
+  if (active_keys.s === true && active_keys.a === true) {
+    player.move_direction((Math.PI * 3) / 4);
+  }
+  if (active_keys.s === true && active_keys.d === true) {
+    player.move_direction((-Math.PI * 3) / 4);
   }
   if (active_keys.space === true) {
     player.jump();
