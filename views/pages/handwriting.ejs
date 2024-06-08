@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include("../parts/head.ejs") %>
+
+    <link href="/public/css/handwriting.css" rel="stylesheet" type="text/css" />
+
+    <title>Handwritten digit recognition</title>
+  </head>
+
+  <body>
+    <%- include("../parts/header.ejs") %>
+    <div id="body-container">
+      <h1>Handwritten digit recognition</h1>
+      <canvas id="canvas" width="500" height="500"></canvas>
+
+      <h2>Number detected :</h2>
+      <p id="number">?</p>
+
+      <h2>Correction if wrong :</h2>
+      <input id="correction-input" />
+      <button id="correction-button">Send</button>
+    </div>
+
+    <script type="module" src="/public/lib/face.js"></script>
+    <script type="module" src="/public/services/handwriting-control.js"></script>
+    <script type="module" src="/public/api/handwriting.js"></script>
+    <%- include("../parts/footer.ejs") %>
+  </body>
+</html>

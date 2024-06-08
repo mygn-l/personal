@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include("../parts/head.ejs") %>
+
+    <title><%= work_name %></title>
+  </head>
+
+  <body>
+    <%- include("../parts/header.ejs") %>
+    <div id="body-container">
+      <h2><%= work_name %></h2>
+
+      <iframe src="/public/pdf/<%= file_name %>.pdf"></iframe>
+    </div>
+    <%- include("../parts/footer.ejs") %>
+  </body>
+</html>

@@ -15,3 +15,16 @@
 
 # Node.js dependencies:
 node_modules/
+
+# Other
+
+.DS_Store
+
+dev/
+
+point-cloud.ejs
+hackathon.ejs
+hackathon-test.ejs
+style.css
+alt-images/
+hackathon.js

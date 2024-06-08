@@ -1,15 +1,23 @@
 import { io } from "/socket.io";
 
 const GET = async function (path, handler) {
-  let response = await fetch(path);
-  return handler(response);
+  let response = await fetch(path, {
+    method: "GET",
+  });
+  let trans_response = await response.json();
+  return handler(trans_response);
 };
 
 const POST = async function (path, body, handler) {
   let response = await fetch(path, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method: "POST",
     body: body,
   });
-  return handler(response);
+  let trans_response = await response.json();
+  return handler(trans_response);
 };
 
 const Router = class {

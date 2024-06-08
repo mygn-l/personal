@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include("../parts/head.ejs") %>
+
+    <title>Fitness</title>
+  </head>
+
+  <body>
+    <%- include("../parts/header.ejs") %>
+    <div id="body-container">
+      <h1>Fitness</h1>
+
+      <h2>Cardio light</h2>
+
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Sets</th>
+          <th>Duration (mins)</th>
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td>Warm up: fast walk</td>
+          <td>1</td>
+          <td>2</td>
+          <td>5-6 on treadmill</td>
+        </tr>
+        <tr>
+          <td>Running</td>
+          <td>1</td>
+          <td>7</td>
+          <td>9-11 on treadmill</td>
+        </tr>
+        <tr>
+          <td>Cool down: fast walk</td>
+          <td>1</td>
+          <td>1</td>
+          <td>4-5 on treadmill</td>
+        </tr>
+      </table>
+
+      <h2>Cardio heavy</h2>
+
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Sets</th>
+          <th>Duration (mins)</th>
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td>Warm up: fast walk</td>
+          <td>1</td>
+          <td>5</td>
+          <td>5-6 on treadmill</td>
+        </tr>
+        <tr>
+          <td>Running</td>
+          <td>1</td>
+          <td>12</td>
+          <td>9-11 on treadmill</td>
+        </tr>
+        <tr>
+          <td>Cool down: fast walk</td>
+          <td>1</td>
+          <td>3</td>
+          <td>4-5 on treadmill</td>
+        </tr>
+      </table>
+
+      <h2>Muscle upper</h2>
+
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+
+        <tr>
+          <th colspan="3">Chest</th>
+        </tr>
+        <tr>
+          <td>Chest press</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Incline dumbbell press</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+
+        <tr>
+          <th colspan="3">Triceps</th>
+        </tr>
+        <tr>
+          <td>Tricep pushdown</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+
+        <tr>
+          <th colspan="3">Lats</th>
+        </tr>
+        <tr>
+          <td>Seated pulldown</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Dumbbell row</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+
+        <tr>
+          <th colspan="3">Biceps</th>
+        </tr>
+        <tr>
+          <td>Curls</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+
+        <tr>
+          <th colspan="3">Shoulders</th>
+        </tr>
+        <tr>
+          <td>Shoulder raise</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Shoulder press</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+      </table>
+
+      <h2>Muscle lower</h2>
+
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <th colspan="4">Quads and glutes</th>
+        </tr>
+        <tr>
+          <td>Squat (weights) / piston</td>
+          <td>2</td>
+          <td>10</td>
+          <td>Follow comfort, knees outward, full range, don't lift heels, lower back straight</td>
+        </tr>
+        <tr>
+          <td>Lunge (weights) / one-leg</td>
+          <td>2</td>
+          <td>10</td>
+          <td>90 degrees</td>
+        </tr>
+        <tr>
+          <td>Side lunge (weights)</td>
+          <td>2 (for each side = 4)</td>
+          <td>10</td>
+          <td>Feet flat on ground</td>
+        </tr>
+
+        <tr>
+          <th colspan="4">Abs</th>
+        </tr>
+        <tr>
+          <td>Situp</td>
+          <td>2</td>
+          <td>10</td>
+          <td>Full range</td>
+        </tr>
+        <tr>
+          <td>Side crunch</td>
+          <td>2</td>
+          <td>10</td>
+          <td>Alternate</td>
+        </tr>
+        <tr>
+          <td>Dead bug</td>
+          <td>1</td>
+          <td>20</td>
+          <td>Alternate, full range</td>
+        </tr>
+        <tr>
+          <td>Lying leg raise</td>
+          <td>1</td>
+          <td>12</td>
+          <td>Full range</td>
+        </tr>
+
+        <tr>
+          <th colspan="4">Abductors and adductors</th>
+        </tr>
+        <tr>
+          <td>Side bridge-leg raise</td>
+          <td>2 (for each side = 4)</td>
+          <td>15</td>
+          <td>Bottom leg curled, top leg full range, alternate bridge and leg raise</td>
+        </tr>
+        <tr>
+          <td>Lying hip adduction</td>
+          <td>2 (for each side = 4)</td>
+          <td>15</td>
+          <td>Top leg support</td>
+        </tr>
+
+        <tr>
+          <th colspan="4">Glute target</th>
+        </tr>
+        <tr>
+          <td>Clamshell (weights)</td>
+          <td>2 (for each side = 4)</td>
+          <td>15</td>
+          <td>Full range, force at top</td>
+        </tr>
+        <tr>
+          <td>Bridge single-leg (weights)</td>
+          <td>2</td>
+          <td>15</td>
+          <td>Squeeze at top</td>
+        </tr>
+
+        <tr>
+          <th colspan="4">Hamstring</th>
+        </tr>
+        <tr>
+          <td>Deadlift (weights)</td>
+          <td>2</td>
+          <td>10</td>
+          <td>Squeeze at top</td>
+        </tr>
+        <tr>
+          <td>Hamstring curl</td>
+          <td>2</td>
+          <td>10</td>
+          <td>Use hamstring instead of back</td>
+        </tr>
+
+        <tr>
+          <th colspan="4">Back</th>
+        </tr>
+        <tr>
+          <td>Back extension / glute-ham raise</td>
+          <td>2</td>
+          <td>10</td>
+          <td>Use pillow</td>
+        </tr>
+
+        <tr>
+          <th colspan="4">Calves</th>
+        </tr>
+        <tr>
+          <td>Calf raise</td>
+          <td>2</td>
+          <td>10</td>
+          <td>Full range</td>
+        </tr>
+      </table>
+
+      <h2>Stretches</h2>
+
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Sets</th>
+          <th>Duration (secs)</th>
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <th colspan="3">Upper</th>
+        </tr>
+        <tr>
+          <td>Chest</td>
+          <td>1</td>
+          <td>30</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Shoulders</td>
+          <td>1 (for each side = 2)</td>
+          <td>30</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Biceps</td>
+          <td>1</td>
+          <td>30</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Triceps/lats</td>
+          <td>1</td>
+          <td>30</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Neck</td>
+          <td>1 (for each side = 2)</td>
+          <td>30</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Child / lats on wall</td>
+          <td>1</td>
+          <td>30</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <th colspan="3">Lower</th>
+        </tr>
+        <tr>
+          <td>Snake</td>
+          <td>2</td>
+          <td>30</td>
+          <td>Look front, look left, look right</td>
+        </tr>
+        <tr>
+          <td>Side stretch</td>
+          <td>2 (for each side = 4)</td>
+          <td>30</td>
+          <td>Left hand touch left, right hand touch right, parallel</td>
+        </tr>
+        <tr>
+          <td>Forward fold</td>
+          <td>2</td>
+          <td>30</td>
+          <td>One straight legs, one shoulder-wide feet</td>
+        </tr>
+        <tr>
+          <td>Seated twist</td>
+          <td>1 (for each side = 2)</td>
+          <td>30</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Quads</td>
+          <td>1 (for each side = 2)</td>
+          <td>30</td>
+          <td>Turn middle, outer, inner</td>
+        </tr>
+        <tr>
+          <td>Side split</td>
+          <td>2</td>
+          <td>30</td>
+          <td>Feet to wall, reach hand to wall</td>
+        </tr>
+        <tr>
+          <td>Lotus</td>
+          <td>1</td>
+          <td>30</td>
+          <td>Back straight</td>
+        </tr>
+        <tr>
+          <td>Calves</td>
+          <td>1 (for each side = 2)</td>
+          <td>30</td>
+          <td></td>
+        </tr>
+      </table>
+
+      <h2>Gymnastics</h2>
+
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td>Tip-toe stand</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Closed-eye stand</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>Handstand</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>Jump onto mat</td>
+          <td>Absorb shock and stability</td>
+        </tr>
+        <tr>
+          <td>Kick to handstand</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Bar pullover</td>
+          <td>"Back flip" on bar</td>
+        </tr>
+        <tr>
+          <td>Bar cast</td>
+          <td>Parallel to ground</td>
+        </tr>
+        <tr>
+          <td>Back hip circle</td>
+          <td>Bar cast + bar pullover</td>
+        </tr>
+        <tr>
+          <td>Sole circle dismount</td>
+          <td>Bar cast to feet on bar, then swing to dismount</td>
+        </tr>
+        <tr>
+          <td>Underswing dismount</td>
+          <td>Bar pullover + swing to dismount</td>
+        </tr>
+        <tr>
+          <td>Jump to front support mount</td>
+          <td>Jump, then split over beam</td>
+        </tr>
+        <tr>
+          <td>Arabesque</td>
+          <td>30 degrees is enough</td>
+        </tr>
+        <tr>
+          <td>Needle kick</td>
+          <td>Front arabesque, bend over, kick back using same lifted foot</td>
+        </tr>
+        <tr>
+          <td>Releve lockstand</td>
+          <td>Tip toes stand on beam</td>
+        </tr>
+        <tr>
+          <td>Stretch jump (on and off beam)</td>
+          <td>Hand down, jump to hand up, land keep hand up</td>
+        </tr>
+        <tr>
+          <td>Cartwheel to handstand dismount</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Cartwheel</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Backward/forward rolls</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <%- include("../parts/footer.ejs") %>
+  </body>
+</html>

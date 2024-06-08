@@ -1,3 +1,11 @@
 .DS_Store
 
 node_modules/
+
+dev
+
+alt-images
+hackathon.ejs
+point-cloud.ejs
+hackathon.css
+hackathon.js

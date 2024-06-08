@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include("../parts/head.ejs") %>
+
+    <link href="/public/css/calculator.css" rel="stylesheet" type="text/css" />
+
+    <title>Scientific calculator</title>
+  </head>
+
+  <body>
+    <%- include("../parts/header.ejs") %>
+    <div id="body-container">
+      <h1>Scientific calculator</h1>
+
+      <h2>Expression :</h2>
+      <input id="expression-input" />
+      <button id="expression-button">Evaluate</button>
+
+      <h2>Answer :</h2>
+      <p id="answer">?</p>
+    </div>
+
+    <script type="module" src="/public/lib/face.js"></script>
+    <script type="module" src="/public/services/calculator-control.js"></script>
+    <script type="module" src="/public/api/calculator.js"></script>
+    <%- include("../parts/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include("../parts/head.ejs") %>
+
+    <title>3D engine</title>
+  </head>
+
+  <body>
+    <%- include("../parts/header.ejs") %>
+    <div id="body-container">
+      <p>WASD to move camera, QE to rotate camera.</p>
+    </div>
+    <script type="module" src="/public/lib/eng.js"></script>
+    <script type="module" src="/public/api/3d-eng.js"></script>
+    <%- include("../parts/footer.ejs") %>
+  </body>
+</html>

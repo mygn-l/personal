@@ -1,0 +1,33 @@
+canvas {
+  border: 2px solid black;
+  display: block;
+  margin: auto;
+}
+
+#number {
+  display: block;
+  width: 70%;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+#correction-input {
+  display: block;
+  width: 50%;
+  margin: 10px auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+#correction-button {
+  display: block;
+  margin: 10px auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}

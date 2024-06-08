@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include("../parts/head.ejs") %>
+
+    <title>Chess</title>
+  </head>
+
+  <body>
+    <%- include("../parts/header.ejs") %>
+    <div id="body-container">
+      <canvas id="canvas"></canvas>
+    </div>
+    <script type="module" src="/public/api/chess.js"></script>
+    <%- include("../parts/footer.ejs") %>
+  </body>
+</html>
