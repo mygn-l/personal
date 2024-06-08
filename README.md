@@ -12,6 +12,10 @@
 
 ## Run the project
 
+CD into the directory and `node app.js` should be enough. Then, go to "http://localhost".
+
+## Note to myself
+
 Install Homebrew. Install Node using Homebrew. NPM is automatically installed. Install MongoDB community edition using Homebrew. Install Redis using Homebrew. Create a "data" folder. Inside, create a "db" folder.
 
 Run the following commands :
@@ -20,5 +24,4 @@ Run the following commands :
 3. `redis-server`
 4. `node app.js`
 
-Go to "http://localhost".
 Download MongoDB Compass if you want to inspect the database.
