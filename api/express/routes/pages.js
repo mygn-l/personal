@@ -41,6 +41,9 @@ router.get("/calculator", async function (req, res) {
 router.get("/about", async function (req, res) {
   res.render("pages/about.ejs");
 });
+router.get("/contact", async function (req, res) {
+  res.render("pages/contact.ejs");
+});
 
 router.get("/writing", async function (req, res) {
   res.render("pages/writing.ejs");
